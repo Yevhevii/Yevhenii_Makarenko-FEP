@@ -16,29 +16,33 @@ multiplication = +multiplication.toFixed(2);
 division = randomNumber / thirdNumber;
 division = +division.toFixed(2);
 document.write(`<table>
+<thead>
     <tr>
-        <th class = "title">Operation</th>
-        <th class = "title">Expression</th>
-        <th class = "title">Value</th>
+        <th>Operation</th>
+        <th>Expression</th>
+        <th>Value</th>
     </tr>
-    <tr>
-        <th class = "operation">Sum</th>
-        <th>${randomNumber} + ${thirdNumber}</th>
-        <th>${sum}</th>
+</thead>
+<tbody>
+    <tr class = "tbody">
+        <td class = "operation">Sum</td>
+        <td>${randomNumber} + ${thirdNumber}</td>
+        <td>${sum}</td>
     </tr>
-    <tr>
-        <th class = "operation">Subtraction</th>
-        <th>${randomNumber} - ${thirdNumber}</th>
-        <th>${subtraction}</th>
+    <tr class = "tbody">
+        <td class = "operation">Subtraction</td>
+        <td>${randomNumber} - ${thirdNumber}</td>
+        <td>${subtraction}</td>
     </tr>
-    <tr>
-        <th class = "operation">Multiplication</th>
-        <th>${randomNumber} * ${thirdNumber}</th>
-        <th>${multiplication}</th>
+    <tr class = "tbody">
+        <td class = "operation">Multiplication</td>
+        <td>${randomNumber} * ${thirdNumber}</td>
+        <td>${multiplication}</td>
     </tr>
-    <tr>
-        <th class = "operation">Division</th>
-        <th>${randomNumber} / ${thirdNumber}</th>
-        <th>${division}</th>
+    <tr class = "tbody">
+        <td class = "operation">Division</td>
+        <td>${randomNumber} / ${thirdNumber}</td>
+        <td>${division}</td>
     </tr>
+</tbody>
 </table>`);

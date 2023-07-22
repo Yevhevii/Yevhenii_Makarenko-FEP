@@ -3,18 +3,21 @@ table{
     border: 1px solid black;
     width: 450px;
 }
-tr:nth-child(2n){
+.thead{
+    background: white;
+}
+.tbody:nth-child(2n-1){
     background: lightblue;
 }
-.title{
-    font-weight: 700;
-}
-th{
-    font-weight: 500;
+th,
+td{
     border: 1px solid black;
     padding: 10px;
     width: 150px;
 }
 .operation{
     text-align: left;
+}
+td{
+    text-align: center;
 }
