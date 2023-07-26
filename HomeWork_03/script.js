@@ -1,5 +1,6 @@
+debugger
 question = confirm(`Tell me three most important words`);
-if (question === null){
+if (question){
     firstWord = prompt(`Enter word#1`);
     while(firstWord === null || firstWord.replaceAll(" ","") === ""){
         firstWord = prompt(`Enter word#1`);
