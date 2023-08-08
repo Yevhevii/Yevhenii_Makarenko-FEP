@@ -1,8 +1,10 @@
-do{sizeArray = Math.abs(Math.round(+prompt(`Enter the length of the array from 2 to 10`)));}
+fromNumber = 5;
+toNumber = 10;
+do{sizeArray = Math.abs(Math.round(+prompt(`Enter the length of the array from ${fromNumber} to ${toNumber}`)));}
 while(isNaN(sizeArray) 
 || sizeArray === null
-|| sizeArray < 2
-|| sizeArray >  10);
+|| sizeArray < fromNumber
+|| sizeArray > toNumber);
 arr = new Array(+`${sizeArray}`);
 minRandom = -10;
 maxRandom = 10;
