@@ -1,0 +1,37 @@
+body{
+    font: 500 14px/20px "Quicksand", sans-serif;
+}
+.colors-case{
+    display: flex;
+    gap: 15px;
+}
+.color{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.red{
+    background-color: red;
+}
+.orange{
+    background-color: orange;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+.light-blue{
+    background-color: lightblue;
+}
+.blue{
+    background-color: blue;
+}
+.violet{
+    background-color: violet;
+}
+.text{
+    margin-top: 50px;
+    text-align: center;
+}
