@@ -6,7 +6,8 @@ animals = [
 	['🐻','bear','Paddington']
 ];
 
-function getInfo(animalsArrey) {
+function getInfo(animalsArrey,animalsTitle) {
+    animalsTitle = `<h3>Animals info</h3>`;
     trs = [];
 for(i=0; i<animalsArrey.length; i++){
     animalsItem = animalsArrey[i];
@@ -17,14 +18,11 @@ for(i=0; i<animalsArrey.length; i++){
     tr = `<tr>${tds.join(``)}</tr>`
     trs.push(tr);
     }
-    return `<table>${trs.join(``)}</table>`;
+    return `<h3>${animalsTitle}</h3>
+    <table>${trs.join(``)}</table>`;
 }
-animalsTable = getInfo(animals);
-animalsTitle = `<h3>Animals info</h3>`;
-animalsInfo = `<div class="table-case">
-<h3>${animalsTitle}</h3>
-<div>${animalsTable}</div>
-</div>`
+animalsTable = getInfo(animals, `Animals`);
+animalsInfo = `<div>${animalsTable}</div>`
 
 food = [
 	['🍎','apple',10],
@@ -34,26 +32,25 @@ food = [
 	['🍌','banana',7]
 ];
 
-function getFruits(fruitsArrey) {
+function getFruits(foodsArrey, foodsTitle) {
+    foodsTitle = `<h3>Food info</h3>`;
     trs = [];
-for(i=0; i<fruitsArrey.length; i++){
-    fruitsItem = fruitsArrey[i];
+for(i=0; i<foodsArrey.length; i++){
+    foodsItem = foodsArrey[i];
     tds = [];
-    for(j=0; j<fruitsItem.length; j++){
-        tds.push(`<td>${fruitsItem[j]}</td>`)
+    for(j=0; j<foodsItem.length; j++){
+        tds.push(`<td>${foodsItem[j]}</td>`)
     }
     tr = `<tr>${tds.join(``)}</tr>`
     trs.push(tr);
     }
-    return `<table>${trs.join(``)}</table>`;
+    return `<h3>${foodsTitle}</h3>
+    <table>${trs.join(``)}</table>`;
 }
-fruitsTable = getFruits(food);
-fruitsTitle = `<h3>Food info</h3>`;
-fruitsInfo = `<div class="table-case">
-<h3>${fruitsTitle}</h3>
-<div>${fruitsTable}</div>
-</div>`
+foodsTable = getFruits(food, `Food`);
+foodsInfo = `<div>${foodsTable}</div>`
+
 document.write(`<div class="table-info">
        ${animalsInfo}
-       ${fruitsInfo}
+       ${foodsInfo}
 </div>`);
