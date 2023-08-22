@@ -7,10 +7,10 @@ const animalsList =  [
 ];
 
 let array = anyArray =>{
-	arr = JSON.parse(JSON.stringify(anyArray));
-	renderList=[];
-	for(i=0; i<arr.length; i++){
-		arrItem = arr[i];
+	let arr = JSON.parse(JSON.stringify(anyArray));
+	let renderList=[];
+	for(let i=0; i<arr.length; i++){
+		let arrItem = arr[i];
 		renderList.push(`<p>${arrItem.join(`: `)}</p>`);
 	}
 	return renderList;
