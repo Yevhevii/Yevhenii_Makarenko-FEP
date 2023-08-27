@@ -20,7 +20,7 @@ const renderTable = arr => {
     let sum = filterUsersArr.reduce((value, item) => value += item[2], 0);
 
     let Trs = filterUsersArr.map(item => `<tr>
-        ${item.map(el => `<td>${el}</td>`).join(``)}
+        ${item.map(element => `<td>${element}</td>`).join(``)}
         </tr>`)
         .join(``);
 
