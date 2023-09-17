@@ -1,6 +1,4 @@
 const BLOCK = document.querySelector(`.block`);
-BLOCK.style.left = 0;
-BLOCK.style.top = 0;
 
 setInterval(()=>{
     const bodyWidth = document.body.clientWidth;
