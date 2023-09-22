@@ -102,12 +102,13 @@ class User{
         obj = JSON.parse(JSON.stringify(obj));
         Object.assign(this, obj);
     }
+
     render(){
 		const photo = `<img src="images/users/${this.img}.png" alt="${this.name}" height="50">`;
 
 		const usersRoleInfo = `<img src="images/role/${this.role}.png" alt="${this.role}" height="25"`;
 
-		document.write(`
+		return (`
         <div class="user">
             <div class="user__info">
                 <div class="user__info--data">
@@ -122,33 +123,25 @@ class User{
                     <p>${this.role}</p>
                 </div>
             </div>
-            <div class="user__courses">
 			${this.courses ? this.renderCours() : ``}
-            </div>`);
+		</div>`);
     }
 
-	getTitleCouse(){
+	renderCours(){
 		if(this.courses){
-            return this.courses
-                .map(course => {
-                    let courseInfo = Object
-					.values(course)
-					.map(values => `${course[values]}`)
-                    return console.log(courseInfo); 
-                })
-        } else {
-            return ``;
-        }
-    }
-
-    renderCours(){
-		const couseList = this.courses
-		.map(courses => {
-			const gradation = this.getGradation(courses.mark);
-			return `<p class="user__courses--course ${this.role}"> ${this.getTitleCouse()} <span class="${gradation}">${gradation}</span></p>`})
-		.join(``);
-		return `<div class="user__courses"> ${couseList}</div>`;
+			return `<div class="user__courses">
+				${this.courses
+					.map(course => `<p class="user__courses--course student">
+						${course.title} 
+						<span class="${this.getGradation(course.mark)}">${this.getGradation(course.mark)}</span>
+					</p>`)
+					.join(``)
+				}
+			</div>`;
+		} else{
+			return ``;
 		}
+    }
 
 	getGradation(mark){
 		return Object
@@ -173,6 +166,7 @@ class Admin extends User{
 	constructor(obj){
 		super(obj);
 	}
+
 	renderCours(){
 		const couseList = this.courses
 		.map(courses => {
@@ -218,6 +212,7 @@ const renderTable = users
 			? USER_ROLES[userRole](obj)
 			: new User(obj)
 		return user.render();
-	});
+	})
+	.join(``);
 
-	document.write(`<div class="users">${renderTable(users)}</div>`);
+document.write(`<div class="users">${renderTable}</div>`);
