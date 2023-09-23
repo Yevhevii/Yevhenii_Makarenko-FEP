@@ -27,13 +27,16 @@ const randomMovingBlockTop = (()=>{
 })
 
 setInterval(()=>{
-    const bodyWidth = document.body.clientWidth;
-    const bodyHeight = document.body.clientHeight;
-    maxMoveBlockLeft = bodyWidth - BLOCK.clientWidth;
-    maxMoveBlockTop = bodyHeight - BLOCK.clientHeight;
+    if(BLOCK){
+        const bodyWidth = document.body.clientWidth;
+        const bodyHeight = document.body.clientHeight;
+        maxMoveBlockLeft = bodyWidth - BLOCK.clientWidth;
+        maxMoveBlockTop = bodyHeight - BLOCK.clientHeight;
 
-    BLOCK.style.background = randomColor();
-    BLOCK.style.top = randomMovingBlockTop() + `px`;
-    BLOCK.style.left = randomMovingBlockLeft() + `px`;
+        BLOCK.style.background = randomColor();
+        BLOCK.style.top = randomMovingBlockTop() + `px`;
+        BLOCK.style.left = randomMovingBlockLeft() + `px`;
 
+    }
+    
 },500);
