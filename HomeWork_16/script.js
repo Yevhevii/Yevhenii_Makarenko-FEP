@@ -1,5 +1,4 @@
-let btns = document.querySelectorAll(`button`);
-btns = [...btns];
+const btns = document.querySelectorAll(`button`);
 
 const firstFunc = (e)=>{
     console.log(`First func for ${e.target.textContent}`);
@@ -17,6 +16,6 @@ const lastFunc = (e)=>{
     console.log(`The last func for ${e.target.textContent}`);
 }
 
-btns.map((btn)=>{
+btns.forEach((btn)=>{
     btn.addEventListener(`click`, firstFunc);
 })
