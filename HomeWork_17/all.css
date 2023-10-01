@@ -1,0 +1,28 @@
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.todo {
+    background: #cfcece;
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 100px;
+    cursor: pointer;
+}
+
+.todo.active {
+    background: rgb(96, 12, 174);
+    color: white;
+}
+
+.todo h3 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
