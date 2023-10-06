@@ -31,7 +31,6 @@ promiseATM
             console.log(`Take ${obj.amount} ${obj.currency}, please.`);
         },
         (obj)=>{
-            console.log(obj);
             console.log(`Information about the account was sent to the ${obj.email} in ${obj.language}.`);
         }
     )
