@@ -1,0 +1,19 @@
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+.row__brand{
+    background: lightblue;
+    text-align: center;
+}
+.cell__model{
+    background: lightgreen;
+}
+.td_collection{
+    display: flex;
+}
